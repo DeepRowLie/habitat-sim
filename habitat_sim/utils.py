@@ -90,7 +90,7 @@ def quat_from_angle_axis(theta: float, axis: np.ndarray) -> np.quaternion:
     Returns:
         np.quaternion: The quaternion
     """
-    axis = axis.astype(np.float)
+    axis = axis.astype(float)
     axis /= np.linalg.norm(axis)
     return quaternion.from_rotation_vector(theta * axis)
 
